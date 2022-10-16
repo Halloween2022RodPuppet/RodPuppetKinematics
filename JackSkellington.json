@@ -2,7 +2,7 @@
 "JackSkellington": {
  "CriticalDimensions":
    "RodToString": "7.5",
-   "RodToServo": "19.91"
+   "RodToServo": "19.91",
    "ServoHornLength": "14.47",
    "StringLength": "53.45"
  }
