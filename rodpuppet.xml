@@ -14,7 +14,7 @@
 		<file>parallelTool.groovy</file>
 	</parallelCadEngine>
 
-<name>JackSkelington</name>
+<name>Fanuc_Delta_DR</name>
 <appendage>
 
 <name>CoreSpherical</name>
@@ -281,9 +281,9 @@
 <parallelGroup>delta</parallelGroup>
 
 <parallelGroupTipOffset>
-	<x>10.0</x>
+	<x>9.999999999999996</x>
 	<y>0.0</y>
-	<z>0.0</z>
+	<z>17.320508075688775</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
@@ -649,13 +649,13 @@
 </ZframeToRAS>
 
 <baseToZframe>
-	<x>0.0</x>
-	<y>0.0</y>
+	<x>-12.499999999999995</x>
+	<y>21.65063509461097</y>
 	<z>0.0</z>
-	<rotw>0.6830132979329834</rotw>
+	<rotw>0.6830132979329833</rotw>
 	<rotx>0.18301254218343854</rotx>
 	<roty>-0.6830121058509352</roty>
-	<rotz>0.18301286160086064</rotz>
+	<rotz>0.18301286160086067</rotz>
 </baseToZframe>
 
 </appendage>
