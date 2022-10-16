@@ -5,7 +5,7 @@ import com.neuronrobotics.sdk.common.DeviceManager
 
 //Your code here
 
-MobileBase mb = DeviceManager.getSpecificDevice("JackSkelington"); 
+MobileBase mb = DeviceManager.getSpecificDevice("JackSkellington"); 
 
 DHParameterKinematics kn = mb.getAllDHChains().get(0);
 
