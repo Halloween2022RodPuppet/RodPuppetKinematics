@@ -9,7 +9,7 @@ MobileBase mb = DeviceManager.getSpecificDevice("JackSkellington");
 
 DHParameterKinematics kn = mb.getAllDHChains().get(0);
 
-def joints = [-30,30,0,20] as double[]
+def joints = [30,-30,0,-20,0] as double[]
 
 TransformNR tf =kn.forwardOffset(kn.forwardKinematics(joints))
 
