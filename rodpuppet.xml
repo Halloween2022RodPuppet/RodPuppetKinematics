@@ -338,8 +338,8 @@
 
 <parallelGroupTipOffset>
 	<x>3.7499999999999982</x>
-	<y>0.0</y>
-	<z>6.49519052838329</z>
+	<y>-6.49519052838329</y>
+	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
@@ -723,8 +723,8 @@
 
 <parallelGroupTipOffset>
 	<x>3.7500000000000036</x>
-	<y>0.0</y>
-	<z>-6.495190528383288</z>
+	<y>6.495190528383288</y>
+	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
@@ -1108,7 +1108,7 @@
 
 <parallelGroupTipOffset>
 	<x>-7.5</x>
-	<y>0.0</y>
+	<y>-0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>

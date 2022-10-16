@@ -54,7 +54,7 @@ for(DHParameterKinematics k:base.getAllDHChains()) {
 		double centerx = eoaPlatRad *Math.cos(Math.toRadians(rot))
 		double centery =eoaPlatRad*Math.sin(Math.toRadians(rot))
 		println "Rot "+rot+" x"+centerx+" y"+centery
-		TransformNR	tipLoc = new TransformNR(-centerx,0,centery,new RotationNR(0, 0,0))
+		TransformNR	tipLoc = new TransformNR(-centerx,-centery,0,new RotationNR(0, 0,0))
 		//println tipLoc
 		baseGetParallelGroup.setTipOffset(k, tipLoc)
 	}
