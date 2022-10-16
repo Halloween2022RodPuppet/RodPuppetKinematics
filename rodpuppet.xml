@@ -362,14 +362,14 @@
 	<deviceName>rodpuppet</deviceName>
 	<type>hidfast</type>
 	<index>0</index>
-	<scale>1.0</scale>
-	<upperLimit>170.00001556208602</upperLimit>
-	<lowerLimit>-170.00001556208602</lowerLimit>
-	<upperVelocity>370.0</upperVelocity>
-	<lowerVelocity>-370.0</lowerVelocity>
-	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>170.00001556208602</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-170.00001556208602</deviceTheoreticalMin>
+	<scale>-0.512698413</scale>
+	<upperLimit>180.0</upperLimit>
+	<lowerLimit>0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>90</staticOffset>
+	<deviceTheoreticalMax>180</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
 	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -747,14 +747,14 @@
 	<deviceName>rodpuppet</deviceName>
 	<type>hidfast</type>
 	<index>1</index>
-	<scale>1.0</scale>
-	<upperLimit>170.00001556208602</upperLimit>
-	<lowerLimit>-170.00001556208602</lowerLimit>
-	<upperVelocity>370.0</upperVelocity>
-	<lowerVelocity>-370.0</lowerVelocity>
-	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>170.00001556208602</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-170.00001556208602</deviceTheoreticalMin>
+	<scale>-0.512698413</scale>
+	<upperLimit>180.0</upperLimit>
+	<lowerLimit>0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>90</staticOffset>
+	<deviceTheoreticalMax>180</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
 	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -1132,14 +1132,14 @@
 	<deviceName>rodpuppet</deviceName>
 	<type>hidfast</type>
 	<index>2</index>
-	<scale>1.0</scale>
-	<upperLimit>170.00001556208602</upperLimit>
-	<lowerLimit>-170.00001556208602</lowerLimit>
-	<upperVelocity>370.0</upperVelocity>
-	<lowerVelocity>-370.0</lowerVelocity>
-	<staticOffset>0.0</staticOffset>
-	<deviceTheoreticalMax>170.00001556208602</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-170.00001556208602</deviceTheoreticalMin>
+	<scale>-0.512698413</scale>
+	<upperLimit>180.0</upperLimit>
+	<lowerLimit>0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>90</staticOffset>
+	<deviceTheoreticalMax>180</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
 	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
