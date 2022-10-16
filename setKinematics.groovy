@@ -14,11 +14,13 @@ MobileBase base=DeviceManager.getSpecificDevice( "Fanuc_Delta_DR",{
 	  )
 })
 
-double baseCircleDiam = 50
-double powerLinkLen = 100
-double passiveLinkLen = 100
-double eoaPlatRad =20
+double baseCircleDiam = 19.91*2.0
+double powerLinkLen = 14.47
+double passiveLinkLen = 53.45
+double eoaPlatRad =7.5
 double passiveSepDist =0
+double sphericalAtZero = 45.71;
+
 DHParameterKinematics tar=null
 
 for(DHParameterKinematics k:base.getAllDHChains()) {
@@ -27,6 +29,7 @@ for(DHParameterKinematics k:base.getAllDHChains()) {
 	double rot =0
 	if(name.endsWith("CoreSpherical")) {
 		tar=k
+		k.setDH_D(3, sphericalAtZero)
 		continue;
 	}
 	if(name.contains("2")) {
@@ -34,6 +37,9 @@ for(DHParameterKinematics k:base.getAllDHChains()) {
 	}
 	if(name.contains("3")) {
 		rot=240
+	}
+	if(name.contains("4")) {
+		rot=0
 	}
 	def rotation = new TransformNR(0,0,0,new RotationNR(0, rot, 0))
 	TransformNR limbRoot = rotation
@@ -44,7 +50,7 @@ for(DHParameterKinematics k:base.getAllDHChains()) {
 	k.setDH_D(3, passiveLinkLen)
 	ParallelGroup baseGetParallelGroup = base.getParallelGroup(k)
 
-	if(baseGetParallelGroup!=null && !name.endsWith("1")) {
+	if(baseGetParallelGroup!=null ) {
 		double centerx = eoaPlatRad *Math.cos(Math.toRadians(rot))
 		double centery =eoaPlatRad*Math.sin(Math.toRadians(rot))
 		println "Rot "+rot+" x"+centerx+" y"+centery
