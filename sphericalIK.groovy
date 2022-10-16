@@ -38,7 +38,7 @@ return new DhInverseSolver() {
 		jointSpaceVector[1]=a2d
 		jointSpaceVector[2]=0
 		jointSpaceVector[3]=ext		
-		
+		println jointSpaceVector
 		return jointSpaceVector;
 	}
 	

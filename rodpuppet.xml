@@ -18,8 +18,8 @@
 		<file>ThreeDPrintCad.groovy</file>
 	</cadEngine>
 	<kinematics>
-		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
-		<file>DefaultDhSolver.groovy</file>
+		<git>https://github.com/Halloween2022RodPuppet/RodPuppetKinematics.git</git>
+		<file>sphericalIK.groovy</file>
 	</kinematics>
 <link>
 	<name>basePan</name>
