@@ -144,8 +144,8 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>121.0</staticOffset>
-	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
-	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
 	<indexLatch>121.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
@@ -231,7 +231,7 @@
 	<roty>-0.0</roty>
 	<rotz>-0.0</rotz>
 </baseToZframe>
-	<mass>0.5</mass>
+	<mass>0.005</mass>
 	<centerOfMassFromCentroid>	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
