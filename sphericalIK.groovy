@@ -32,14 +32,14 @@ return new DhInverseSolver() {
 		double a2 = Math.atan2(z,x); // Z angle using x axis and z axis
 		double a2d = Math.toDegrees(a2);
 		double wristVect =  Math.sqrt(Math.pow(x, 2) + Math.pow(z, 2)); // x and z vector
-		double ext = wristVect -links.get(3).getD()
+		double ext = wristVect -links.get(3).getD()-links.get(4).getD()
 		
 		jointSpaceVector[0]=a1d+180
 		if(jointSpaceVector[0]>180)
 			jointSpaceVector[0]=jointSpaceVector[0]-360
 		jointSpaceVector[1]=a2d
 		jointSpaceVector[2]=0
-		jointSpaceVector[3]=ext		
+		jointSpaceVector[3]=ext	
 		return jointSpaceVector;
 	}
 	
