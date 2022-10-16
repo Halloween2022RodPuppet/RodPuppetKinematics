@@ -4,6 +4,7 @@
    "RodToString": "7.5",
    "RodToServo": "19.91",
    "ServoHornLength": "14.47",
-   "StringLength": "53.45"
+   "StringLength": "53.45",
+   "HomeExtensionLength": "45.71"
  }
 }
