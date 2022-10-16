@@ -34,11 +34,12 @@ return new DhInverseSolver() {
 		double wristVect =  Math.sqrt(Math.pow(x, 2) + Math.pow(z, 2)); // x and z vector
 		double ext = wristVect -links.get(3).getD()
 		
-		jointSpaceVector[0]=a1d
+		jointSpaceVector[0]=a1d+180
+		if(jointSpaceVector[0]>180)
+			jointSpaceVector[0]=jointSpaceVector[0]-360
 		jointSpaceVector[1]=a2d
 		jointSpaceVector[2]=0
 		jointSpaceVector[3]=ext		
-		println jointSpaceVector
 		return jointSpaceVector;
 	}
 	
