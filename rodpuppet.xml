@@ -133,7 +133,6 @@
 	</DHParameters>
 
 </link>
-
 <link>
 	<name>dummy</name>
 	<deviceName>virtualDev</deviceName>
@@ -183,7 +182,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>0</Delta>
+		<Delta>0.0</Delta>
 		<Theta>0.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -261,10 +260,10 @@
 	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotw>0.7071684852014806</rotw>
+	<rotx>-0.0</rotx>
+	<roty>0.7070450717866884</roty>
+	<rotz>-0.0</rotz>
 </baseToZframe>
 
 </appendage>
