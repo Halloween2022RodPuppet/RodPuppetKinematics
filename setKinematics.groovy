@@ -7,7 +7,7 @@ import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR
 import com.neuronrobotics.sdk.addons.kinematics.parallel.ParallelGroup
 import com.neuronrobotics.sdk.common.DeviceManager
 
-MobileBase base=DeviceManager.getSpecificDevice( "Fanuc_Delta_DR",{
+MobileBase base=DeviceManager.getSpecificDevice( "JackSkellington",{
 	return ScriptingEngine.gitScriptRun(	"https://github.com/Halloween2022RodPuppet/RodPuppetKinematics.git",
 									"rodpuppet.xml",
 									null

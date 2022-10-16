@@ -245,7 +245,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>150.0</Delta>
+		<Delta>45.71</Delta>
 		<Theta>0.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -281,9 +281,9 @@
 <parallelGroup>delta</parallelGroup>
 
 <parallelGroupTipOffset>
-	<x>9.999999999999996</x>
+	<x>3.7499999999999982</x>
 	<y>0.0</y>
-	<z>17.320508075688775</z>
+	<z>6.49519052838329</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
@@ -406,7 +406,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100.0</Delta>
+		<Delta>14.47</Delta>
 		<Theta>180.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -518,7 +518,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100.0</Delta>
+		<Delta>53.45</Delta>
 		<Theta>-0.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -649,8 +649,8 @@
 </ZframeToRAS>
 
 <baseToZframe>
-	<x>-12.499999999999995</x>
-	<y>21.65063509461097</y>
+	<x>-9.954999999999997</x>
+	<y>17.242565789348177</y>
 	<z>0.0</z>
 	<rotw>0.6830132979329833</rotw>
 	<rotx>0.18301254218343854</rotx>
@@ -666,9 +666,9 @@
 <parallelGroup>delta</parallelGroup>
 
 <parallelGroupTipOffset>
-	<x>9.999999999999996</x>
+	<x>3.7500000000000036</x>
 	<y>0.0</y>
-	<z>17.320508075688775</z>
+	<z>-6.495190528383288</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
@@ -791,7 +791,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100.0</Delta>
+		<Delta>14.47</Delta>
 		<Theta>180.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -903,7 +903,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100.0</Delta>
+		<Delta>53.45</Delta>
 		<Theta>-0.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -1034,13 +1034,13 @@
 </ZframeToRAS>
 
 <baseToZframe>
-	<x>-12.499999999999995</x>
-	<y>21.65063509461097</y>
+	<x>-9.955000000000009</x>
+	<y>-17.24256578934817</y>
 	<z>0.0</z>
-	<rotw>0.6830132979329833</rotw>
-	<rotx>0.18301254218343854</rotx>
-	<roty>-0.6830121058509352</roty>
-	<rotz>0.18301286160086067</rotz>
+	<rotw>0.18301286160086067</rotw>
+	<rotx>0.6830121058509352</rotx>
+	<roty>-0.18301254218343854</roty>
+	<rotz>0.6830132979329833</rotz>
 </baseToZframe>
 
 </appendage>
@@ -1051,9 +1051,9 @@
 <parallelGroup>delta</parallelGroup>
 
 <parallelGroupTipOffset>
-	<x>9.999999999999996</x>
+	<x>-7.5</x>
 	<y>0.0</y>
-	<z>17.320508075688775</z>
+	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
@@ -1176,7 +1176,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100.0</Delta>
+		<Delta>14.47</Delta>
 		<Theta>180.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -1288,7 +1288,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100.0</Delta>
+		<Delta>53.45</Delta>
 		<Theta>-0.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -1419,13 +1419,13 @@
 </ZframeToRAS>
 
 <baseToZframe>
-	<x>-12.499999999999995</x>
-	<y>21.65063509461097</y>
+	<x>19.91</x>
+	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>0.6830132979329833</rotw>
-	<rotx>0.18301254218343854</rotx>
-	<roty>-0.6830121058509352</roty>
-	<rotz>0.18301286160086067</rotz>
+	<rotw>0.5000004363321227</rotw>
+	<rotx>-0.49999956366749654</rotx>
+	<roty>-0.4999995636674966</roty>
+	<rotz>-0.5000004363321225</rotz>
 </baseToZframe>
 
 </appendage>
