@@ -9,7 +9,7 @@
 		<file>WalkingDriveEngine.groovy</file>
 	</driveEngine>
 
-<name>device</name>
+<name>JackSkelington</name>
 
 <ZframeToRAS>
 	<x>0.0</x>
