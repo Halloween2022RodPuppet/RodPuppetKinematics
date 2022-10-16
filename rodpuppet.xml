@@ -248,7 +248,7 @@
 		<Delta>45.71</Delta>
 		<Theta>0.0</Theta>
 		<Radius>0.0</Radius>
-		<Alpha>90.0</Alpha>
+		<Alpha>0.0</Alpha>
 	</DHParameters>
 
 </link>
