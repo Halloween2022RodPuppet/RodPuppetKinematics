@@ -8,6 +8,11 @@
 		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
 		<file>WalkingDriveEngine.groovy</file>
 	</driveEngine>
+	<parallelCadEngine>
+		<parallelGroup>delta</parallelGroup>
+		<git>https://gist.github.com/33f2c10ab3adc5bd91f0a58ea7f24d14.git</git>
+		<file>parallelTool.groovy</file>
+	</parallelCadEngine>
 
 <name>JackSkelington</name>
 <appendage>
@@ -196,7 +201,7 @@
 	<deviceName>virtualDev</deviceName>
 	<type>pid-prismatic</type>
 	<index>3</index>
-	<scale>0.33</scale>
+	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -240,7 +245,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>200.0</Delta>
+		<Delta>150.0</Delta>
 		<Theta>0.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -276,8 +281,8 @@
 <parallelGroup>delta</parallelGroup>
 
 <parallelGroupTipOffset>
-	<x>10</x>
-	<y>0</y>
+	<x>10.0</x>
+	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
@@ -285,7 +290,7 @@
 	<rotz>-0.0</rotz>
 	<relativeTo>CoreSpherical</relativeTo>
 
-	<relativeToLink>4</relativeToLink>
+	<relativeToLink>3</relativeToLink>
 
 </parallelGroupTipOffset>
 	<cadEngine>
@@ -401,7 +406,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100</Delta>
+		<Delta>100.0</Delta>
 		<Theta>180.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -513,7 +518,7 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>100</Delta>
+		<Delta>100.0</Delta>
 		<Theta>-0.0</Theta>
 		<Radius>0.0</Radius>
 		<Alpha>90.0</Alpha>
@@ -636,24 +641,25 @@
 <ZframeToRAS
 >	<x>0.0</x>
 	<y>0.0</y>
-	<z>1500.0</z>
-	<rotw>8.726646248878822E-5</rotw>
-	<rotx>-0.9999999961922823</rotx>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
 	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
-	<x>-142.22651867562217</x>
-	<y>79.54355652982144</y>
+	<x>0.0</x>
+	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>0.6830132979329834</rotw>
-	<rotx>0.18301254218343857</rotx>
-	<roty>-0.6830121058509353</roty>
-	<rotz>0.1830128616008607</rotz>
+	<rotx>0.18301254218343854</rotx>
+	<roty>-0.6830121058509352</roty>
+	<rotz>0.18301286160086064</rotz>
 </baseToZframe>
 
 </appendage>
+
 <ZframeToRAS>
 	<x>0.0</x>
 	<y>0.0</y>
