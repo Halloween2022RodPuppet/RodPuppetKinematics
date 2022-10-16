@@ -134,7 +134,7 @@
 
 </link>
 <link>
-	<name>elbow</name>
+	<name>prismatic</name>
 	<deviceName>virtualDev</deviceName>
 	<type>pid-prismatic</type>
 	<index>2</index>
@@ -182,10 +182,10 @@
 	<rotz>-0.0</rotz></imuFromCentroid>
 
 	<DHParameters>
-		<Delta>0.0</Delta>
-		<Theta>90.0</Theta>
-		<Radius>131.0</Radius>
-		<Alpha>0.0</Alpha>
+		<Delta>200.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
 	</DHParameters>
 
 </link>
