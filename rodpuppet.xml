@@ -362,7 +362,7 @@
 	<deviceName>rodpuppet</deviceName>
 	<type>hidfast</type>
 	<index>0</index>
-	<scale>-0.512698413</scale>
+	<scale>0.512698413</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -747,7 +747,7 @@
 	<deviceName>rodpuppet</deviceName>
 	<type>hidfast</type>
 	<index>1</index>
-	<scale>-0.512698413</scale>
+	<scale>0.512698413</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -1132,7 +1132,7 @@
 	<deviceName>rodpuppet</deviceName>
 	<type>hidfast</type>
 	<index>2</index>
-	<scale>-0.512698413</scale>
+	<scale>0.512698413</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
