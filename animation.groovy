@@ -22,14 +22,14 @@ try
 	//gainControl.setValue(gainValue);
 
 	audioClip.start();
-	ThreadUtil.wait(10);
+	ThreadUtil.wait(1);
 	try{
 		while(audioClip.isRunning()&& !Thread.interrupted()){
 			double pos =(double) audioClip.getMicrosecondPosition()/1000.0
 			double len =(double) audioClip.getMicrosecondLength()/1000.0
 			def percent = pos/len*100.0
 			System.out.println("Current "+pos +" Percent = "+percent);
-			ThreadUtil.wait(100);
+			ThreadUtil.wait(10);
 		}
 	}catch(Throwable t){
 		BowlerStudio.printStackTrace(t)
