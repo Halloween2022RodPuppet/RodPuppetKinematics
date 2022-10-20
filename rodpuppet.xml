@@ -363,11 +363,11 @@
 	<type>hidfast</type>
 	<index>0</index>
 	<scale>0.512698413</scale>
-	<upperLimit>180.0</upperLimit>
+	<upperLimit>160.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>90.0</staticOffset>
+	<staticOffset>77.0</staticOffset>
 	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
 	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
@@ -749,10 +749,10 @@
 	<index>1</index>
 	<scale>0.512698413</scale>
 	<upperLimit>180.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<lowerLimit>17.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>90.0</staticOffset>
+	<staticOffset>103.0</staticOffset>
 	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
 	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
@@ -1478,10 +1478,10 @@
 	<x>19.91</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>0.5000004363321227</rotw>
-	<rotx>-0.49999956366749654</rotx>
-	<roty>-0.4999995636674966</roty>
-	<rotz>-0.5000004363321225</rotz>
+	<rotw>0.5000004363321228</rotw>
+	<rotx>-0.49999956366749665</rotx>
+	<roty>-0.4999995636674967</roty>
+	<rotz>-0.5000004363321227</rotz>
 </baseToZframe>
 
 </appendage>
