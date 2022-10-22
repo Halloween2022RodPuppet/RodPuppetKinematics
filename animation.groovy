@@ -12,6 +12,7 @@ def path = ScriptingEngine
 		"song.wav"// File from within the Git repo
 	)
 println path
+
 try
 {
 	AudioInputStream audioStream = AudioSystem.getAudioInputStream(path)
@@ -38,8 +39,9 @@ try
 	audioClip.close()
 	((AudioInputStream)audioStream).close()
 	
-}
-catch (Exception e)
+}catch(java.lang.InterruptedException ex) {
+//exit sig	
+}catch (Exception e)
 {
 	BowlerStudio.printStackTrace(e)
 	return null;
