@@ -5,6 +5,7 @@ import com.neuronrobotics.sdk.addons.kinematics.MobileBase
 import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR
 import com.neuronrobotics.sdk.addons.kinematics.parallel.ParallelGroup
 import com.neuronrobotics.sdk.common.DeviceManager
+import com.neuronrobotics.sdk.common.Log
 import com.neuronrobotics.bowlerstudio.BowlerStudioController
 import com.neuronrobotics.bowlerstudio.assets.ConfigurationDatabase
 import com.neuronrobotics.bowlerstudio.creature.MobileBaseCadManager
@@ -134,21 +135,18 @@ try{
 	def lasttrig=0;
 	while(!Thread.interrupted() ){
 		Thread.sleep(10)
-		TransformNR changed=new TransformNR()
-		changed.setZ(125)
-		changed.setX(rz*20)
-		changed.setY(x*-15)
+		TransformNR changed=pg.calcHome()
+		changed.translateX(rz*20)
+		changed.translateY(x*-15)
 		
 		
-		TransformNR changedr=new TransformNR()
-		changedr.setZ(125)
-		changedr.setX(ljud*20)
-		changedr.setY(straif*15)
+		TransformNR changedr=r.calcHome()
+		changedr.translateX(ljud*20)
+		changedr.translateY(straif*15)
 		
-		TransformNR changedl=new TransformNR()
-		changedl.setZ(125)
-		changedl.setX(ljud*20)
-		changedl.setY(straif*-15)
+		TransformNR changedl=l.calcHome()
+		changedl.translateX(ljud*20)
+		changedl.translateY(straif*-15)
 		
 		pg.setDesiredTaskSpaceTransform(changed, 0);
 		l.setDesiredTaskSpaceTransform(changedl, 0);
