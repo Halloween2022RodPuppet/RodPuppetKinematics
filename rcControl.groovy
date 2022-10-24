@@ -120,7 +120,7 @@ IGameControlEvent listener = new IGameControlEvent() {
 
 					}
 				}
-				System.out.println(name+" is value= "+value);
+				//System.out.println(name+" is value= "+value);
 
 			}
 		}
@@ -136,27 +136,29 @@ try{
 	def lasttrig=0;
 	while(!Thread.interrupted() ){
 		Thread.sleep(10)
-		TransformNR changed=pg.calcHome()
-		changed.translateX(rz*20)
-		changed.translateY(x*-15)
-		
-		
-		TransformNR changedr=r.calcHome()
-		changedr.translateY(ljud*20)
-		changedr.translateX(straif*15*tilt)
-		changedr.translateZ(trigAnalog*tilt*5)
-		
-		TransformNR changedl=l.calcHome()
-		changedl.translateY(ljud*20)
-		changedl.translateX(straif*-15*rTilt)
-		changedl.translateZ(trigAnalog*5)
-		
-		pg.setDesiredTaskSpaceTransform(changed, 0);
-		l.setDesiredTaskSpaceTransform(changedl, 0);
-		r.setDesiredTaskSpaceTransform(changedr, 0);
+		if(System.currentTimeMillis()-timeOfLastCommand<1000) {
+			TransformNR changed=pg.calcHome()
+			changed.translateX(rz*20)
+			changed.translateY(x*-15)
+
+
+			TransformNR changedr=r.calcHome()
+			changedr.translateY(ljud*20)
+			changedr.translateX(straif*15*tilt)
+			changedr.translateZ(trigAnalog*tilt*5)
+
+			TransformNR changedl=l.calcHome()
+			changedl.translateY(ljud*20)
+			changedl.translateX(straif*-15*rTilt)
+			changedl.translateZ(trigAnalog*5)
+
+			pg.setDesiredTaskSpaceTransform(changed, 0);
+			l.setDesiredTaskSpaceTransform(changedl, 0);
+			r.setDesiredTaskSpaceTransform(changedr, 0);
+		}
 	}
 }catch(java.lang.InterruptedException ex) {
-//exit sig	
+	//exit sig
 }catch(Throwable t){
 	t.printStackTrace(System.out)
 }
