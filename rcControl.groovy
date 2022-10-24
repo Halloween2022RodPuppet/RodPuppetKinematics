@@ -95,7 +95,7 @@ IGameControlEvent listener = new IGameControlEvent() {
 				else if(name.contentEquals("r-joy-left-right")){
 					rz=value;
 				}else if(name.contentEquals("analog-trig")){
-					trigAnalog=value/2.0+0.5;
+					trigAnalog=value;
 				}else if(name.contentEquals("z")){
 					trigButton=value/2.0+0.5;
 				}
@@ -120,7 +120,7 @@ IGameControlEvent listener = new IGameControlEvent() {
 
 					}
 				}
-				//System.out.println(name+" is value= "+value);
+				System.out.println(name+" is value= "+value);
 
 			}
 		}
@@ -144,10 +144,12 @@ try{
 		TransformNR changedr=r.calcHome()
 		changedr.translateY(ljud*20)
 		changedr.translateX(straif*15*tilt)
+		changedr.translateZ(trigAnalog*tilt*5)
 		
 		TransformNR changedl=l.calcHome()
 		changedl.translateY(ljud*20)
 		changedl.translateX(straif*-15*rTilt)
+		changedl.translateZ(trigAnalog*5)
 		
 		pg.setDesiredTaskSpaceTransform(changed, 0);
 		l.setDesiredTaskSpaceTransform(changedl, 0);
