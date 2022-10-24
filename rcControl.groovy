@@ -116,7 +116,7 @@ IGameControlEvent listener = new IGameControlEvent() {
 
 					}
 				}
-				System.out.println(name+" is value= "+value);
+				//System.out.println(name+" is value= "+value);
 
 			}
 		}
