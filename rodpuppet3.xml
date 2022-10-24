@@ -311,7 +311,7 @@
 
 <ZframeToRAS
 >	<x>0.0</x>
-	<y>0.0</y>
+	<y>-60.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
@@ -696,7 +696,7 @@
 
 <ZframeToRAS
 >	<x>0.0</x>
-	<y>0.0</y>
+	<y>-60.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
@@ -1081,7 +1081,7 @@
 
 <ZframeToRAS
 >	<x>0.0</x>
-	<y>0.0</y>
+	<y>-60.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
@@ -1466,7 +1466,7 @@
 
 <ZframeToRAS
 >	<x>0.0</x>
-	<y>0.0</y>
+	<y>-60.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
@@ -1478,10 +1478,10 @@
 	<x>19.91</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>0.5000004363321228</rotw>
-	<rotx>-0.49999956366749665</rotx>
-	<roty>-0.4999995636674967</roty>
-	<rotz>-0.5000004363321227</rotz>
+	<rotw>0.5000004363321227</rotw>
+	<rotx>-0.49999956366749654</rotx>
+	<roty>-0.4999995636674966</roty>
+	<rotz>-0.5000004363321225</rotz>
 </baseToZframe>
 
 </appendage>
@@ -1498,7 +1498,7 @@
 
 <baseToZframe>
 	<x>0.0</x>
-	<y>0.0</y>
+	<y>-60.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
