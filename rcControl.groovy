@@ -77,7 +77,7 @@ float rz=0;
 float ljud =0;
 float trigButton=0;
 float trigAnalog=0;
-float tilt=0;
+float tilt=1;
 long timeOfLastCommand = System.currentTimeMillis()
 IGameControlEvent listener = new IGameControlEvent() {
 			@Override public void onEvent(String name,float value) {
@@ -103,23 +103,20 @@ IGameControlEvent listener = new IGameControlEvent() {
 
 					}
 				}else if(name.contentEquals("r-trig-button")){
-					if(value>0) {
-						tilt=1;
-					}else
-						tilt=0;
+
 				}
 				else if(name.contentEquals("l-trig-button")){
 					if(value>0) {
 						tilt=-1;
 					}else
-						tilt=0;
+						tilt=1;
 				}
 				else if(name.contentEquals("y-mode")){
 					if(value>0) {
 
 					}
 				}
-				//System.out.println(name+" is value= "+value);
+				System.out.println(name+" is value= "+value);
 
 			}
 		}
@@ -142,7 +139,7 @@ try{
 		
 		TransformNR changedr=r.calcHome()
 		changedr.translateX(ljud*20)
-		changedr.translateY(straif*15)
+		changedr.translateY(straif*15*tilt)
 		
 		TransformNR changedl=l.calcHome()
 		changedl.translateX(ljud*20)
