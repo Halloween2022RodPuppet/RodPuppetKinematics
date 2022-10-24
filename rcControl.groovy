@@ -78,6 +78,7 @@ float ljud =0;
 float trigButton=0;
 float trigAnalog=0;
 float tilt=1;
+float rTilt=1
 long timeOfLastCommand = System.currentTimeMillis()
 IGameControlEvent listener = new IGameControlEvent() {
 			@Override public void onEvent(String name,float value) {
@@ -103,7 +104,10 @@ IGameControlEvent listener = new IGameControlEvent() {
 
 					}
 				}else if(name.contentEquals("r-trig-button")){
-
+					if(value>0) {
+						rTilt=-1;
+					}else
+						rTilt=1;
 				}
 				else if(name.contentEquals("l-trig-button")){
 					if(value>0) {
@@ -138,12 +142,12 @@ try{
 		
 		
 		TransformNR changedr=r.calcHome()
-		changedr.translateX(ljud*20)
-		changedr.translateY(straif*15*tilt)
+		changedr.translateY(ljud*20)
+		changedr.translateX(straif*15*tilt)
 		
 		TransformNR changedl=l.calcHome()
-		changedl.translateX(ljud*20)
-		changedl.translateY(straif*-15)
+		changedl.translateY(ljud*20)
+		changedl.translateX(straif*-15*rTilt)
 		
 		pg.setDesiredTaskSpaceTransform(changed, 0);
 		l.setDesiredTaskSpaceTransform(changedl, 0);
