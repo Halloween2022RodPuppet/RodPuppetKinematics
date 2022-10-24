@@ -5,8 +5,11 @@ import com.neuronrobotics.sdk.addons.kinematics.MobileBase
 import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR
 import com.neuronrobotics.sdk.addons.kinematics.parallel.ParallelGroup
 import com.neuronrobotics.sdk.common.DeviceManager
+import com.neuronrobotics.bowlerstudio.BowlerStudioController
 import com.neuronrobotics.bowlerstudio.assets.ConfigurationDatabase
+import com.neuronrobotics.bowlerstudio.creature.MobileBaseCadManager
 import com.neuronrobotics.bowlerstudio.creature.MobileBaseLoader
+import com.neuronrobotics.bowlerstudio.threed.BowlerStudio3dEngine
 
 MobileBase base=DeviceManager.getSpecificDevice( "JackSkellington",{
 	//If the device does not exist, prompt for the connection
@@ -40,6 +43,9 @@ MobileBase right=DeviceManager.getSpecificDevice( "JackSkellingtonRightHand",{
 
 
 ParallelGroup pg = base.getParallelGroup("delta")
+ParallelGroup l = left.getParallelGroup("delta")
+ParallelGroup r = right.getParallelGroup("delta")
+
 
 println " base name "+base.getScriptingName()+" paraalell "+pg.getScriptingName()
 
@@ -120,17 +126,33 @@ IGameControlEvent listener = new IGameControlEvent() {
 g.clearListeners()
 Log.enableSystemPrint(true)
 g.addListeners(listener);
+BowlerStudioController.setCsg(MobileBaseCadManager.get(base).getAllCad())
+BowlerStudioController.addObject(MobileBaseCadManager.get(left).getAllCad(), null)
+BowlerStudioController.addObject(MobileBaseCadManager.get(right).getAllCad(), null)
+
 try{
 	def lasttrig=0;
 	while(!Thread.interrupted() ){
-		Thread.sleep(30)
+		Thread.sleep(10)
 		TransformNR changed=new TransformNR()
-		changed.setZ(125+(ljud*-5))
-		//println x+" "+rz
+		changed.setZ(125)
 		changed.setX(rz*20)
 		changed.setY(x*-15)
-		pg.setDesiredTaskSpaceTransform(changed, 0);
 		
+		
+		TransformNR changedr=new TransformNR()
+		changedr.setZ(125)
+		changedr.setX(ljud*20)
+		changedr.setY(straif*15)
+		
+		TransformNR changedl=new TransformNR()
+		changedl.setZ(125)
+		changedl.setX(ljud*20)
+		changedl.setY(straif*-15)
+		
+		pg.setDesiredTaskSpaceTransform(changed, 0);
+		l.setDesiredTaskSpaceTransform(changedl, 0);
+		r.setDesiredTaskSpaceTransform(changedr, 0);
 	}
 }catch(java.lang.InterruptedException ex) {
 //exit sig	
