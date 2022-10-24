@@ -1,0 +1,1530 @@
+<root>
+<mobilebase>
+	<cadEngine>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>ThreeDPrintCad.groovy</file>
+	</cadEngine>
+	<driveEngine>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>WalkingDriveEngine.groovy</file>
+	</driveEngine>
+	<parallelCadEngine>
+		<parallelGroup>delta</parallelGroup>
+		<git>https://gist.github.com/33f2c10ab3adc5bd91f0a58ea7f24d14.git</git>
+		<file>parallelTool.groovy</file>
+	</parallelCadEngine>
+
+<name>JackSkellingtonRightHand</name>
+<appendage>
+
+<name>CoreSpherical</name>
+
+<parallelGroup>delta</parallelGroup>
+	<cadEngine>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>ThreeDPrintCad.groovy</file>
+	</cadEngine>
+	<kinematics>
+		<git>https://github.com/Halloween2022RodPuppet/RodPuppetKinematics.git</git>
+		<file>sphericalIK.groovy</file>
+	</kinematics>
+<link>
+	<name>basePan</name>
+	<deviceName>virtualDev3</deviceName>
+	<type>servo-rotory</type>
+	<index>0</index>
+	<scale>0.33</scale>
+	<upperLimit>255.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>128.43283582089552</staticOffset>
+	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>235.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.01</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>baseTilt</name>
+	<deviceName>virtualDev3</deviceName>
+	<type>servo-rotory</type>
+	<index>1</index>
+	<scale>0.33</scale>
+	<upperLimit>255.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>128.0</staticOffset>
+	<deviceTheoreticalMax>255.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>128.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.01</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>-90.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>dummy</name>
+	<deviceName>virtualDev3</deviceName>
+	<type>pid-prismatic</type>
+	<index>2</index>
+	<scale>0.33</scale>
+	<upperLimit>255.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>121.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>121.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.01</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>prismatic</name>
+	<deviceName>virtualDev3</deviceName>
+	<type>pid-prismatic</type>
+	<index>3</index>
+	<scale>1.0</scale>
+	<upperLimit>255.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>121.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>121.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.01</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>45.71</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>rod</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>pid-prismatic</type>
+	<index>0</index>
+	<scale>1.0</scale>
+	<upperLimit>100000.0</upperLimit>
+	<lowerLimit>-100000.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.01</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>80.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
+
+<ZframeToRAS
+>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>0.7071684852014806</rotw>
+	<rotx>-0.0</rotx>
+	<roty>0.7070450717866884</roty>
+	<rotz>-0.0</rotz>
+</baseToZframe>
+
+</appendage>
+<appendage>
+
+<name>DeltaChain2</name>
+
+<parallelGroup>delta</parallelGroup>
+
+<parallelGroupTipOffset>
+	<x>3.7499999999999982</x>
+	<y>-6.49519052838329</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+	<relativeTo>CoreSpherical</relativeTo>
+
+	<relativeToLink>3</relativeToLink>
+
+</parallelGroupTipOffset>
+	<cadEngine>
+		<git>https://github.com/madhephaestus/Fanuc_Delta_DR-3iB.git</git>
+		<file>deltaCad.groovy</file>
+	</cadEngine>
+	<kinematics>
+		<git>https://github.com/madhephaestus/Fanuc_Delta_DR-3iB.git</git>
+		<file>delta-dh-ik.groovy</file>
+	</kinematics>
+<link>
+	<name>powered</name>
+	<deviceName>rodpuppet</deviceName>
+	<type>hidfast</type>
+	<index>6</index>
+	<scale>0.512698413</scale>
+	<upperLimit>160.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>77.0</staticOffset>
+	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>105.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.078</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>spere-elbow-1</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>8</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>97.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.07200000000000001</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>14.47</Delta>
+		<Theta>180.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>sphere-elbow-2</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>9</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>145.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>-90.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist1</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>10</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>53.45</Delta>
+		<Theta>-0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist2</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>11</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist3</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>12</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
+
+<ZframeToRAS
+>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>-9.954999999999997</x>
+	<y>17.242565789348177</y>
+	<z>0.0</z>
+	<rotw>0.6830132979329834</rotw>
+	<rotx>0.18301254218343857</rotx>
+	<roty>-0.6830121058509353</roty>
+	<rotz>0.1830128616008607</rotz>
+</baseToZframe>
+
+</appendage>
+<appendage>
+
+<name>DeltaChain3</name>
+
+<parallelGroup>delta</parallelGroup>
+
+<parallelGroupTipOffset>
+	<x>3.7500000000000036</x>
+	<y>6.495190528383288</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+	<relativeTo>CoreSpherical</relativeTo>
+
+	<relativeToLink>3</relativeToLink>
+
+</parallelGroupTipOffset>
+	<cadEngine>
+		<git>https://github.com/madhephaestus/Fanuc_Delta_DR-3iB.git</git>
+		<file>deltaCad.groovy</file>
+	</cadEngine>
+	<kinematics>
+		<git>https://github.com/madhephaestus/Fanuc_Delta_DR-3iB.git</git>
+		<file>delta-dh-ik.groovy</file>
+	</kinematics>
+<link>
+	<name>powered</name>
+	<deviceName>rodpuppet</deviceName>
+	<type>hidfast</type>
+	<index>7</index>
+	<scale>0.512698413</scale>
+	<upperLimit>180.0</upperLimit>
+	<lowerLimit>17.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>103.0</staticOffset>
+	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>105.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.078</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>spere-elbow-1</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>14</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>97.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.07200000000000001</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>14.47</Delta>
+		<Theta>180.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>sphere-elbow-2</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>15</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>145.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>-90.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist1</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>16</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>53.45</Delta>
+		<Theta>-0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist2</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>18</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist3</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>19</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
+
+<ZframeToRAS
+>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>-9.955000000000009</x>
+	<y>-17.24256578934817</y>
+	<z>0.0</z>
+	<rotw>0.1830128616008607</rotw>
+	<rotx>0.6830121058509353</rotx>
+	<roty>-0.18301254218343857</roty>
+	<rotz>0.6830132979329834</rotz>
+</baseToZframe>
+
+</appendage>
+<appendage>
+
+<name>DeltaChain4</name>
+
+<parallelGroup>delta</parallelGroup>
+
+<parallelGroupTipOffset>
+	<x>-7.5</x>
+	<y>-0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+	<relativeTo>CoreSpherical</relativeTo>
+
+	<relativeToLink>3</relativeToLink>
+
+</parallelGroupTipOffset>
+	<cadEngine>
+		<git>https://github.com/madhephaestus/Fanuc_Delta_DR-3iB.git</git>
+		<file>deltaCad.groovy</file>
+	</cadEngine>
+	<kinematics>
+		<git>https://github.com/madhephaestus/Fanuc_Delta_DR-3iB.git</git>
+		<file>delta-dh-ik.groovy</file>
+	</kinematics>
+<link>
+	<name>powered</name>
+	<deviceName>rodpuppet</deviceName>
+	<type>hidfast</type>
+	<index>8</index>
+	<scale>0.512698413</scale>
+	<upperLimit>180.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>90.0</staticOffset>
+	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>0.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>105.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.078</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>spere-elbow-1</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>21</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>97.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.07200000000000001</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>14.47</Delta>
+		<Theta>180.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>sphere-elbow-2</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>22</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>145.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>-90.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist1</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>23</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>53.45</Delta>
+		<Theta>-0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist2</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>24</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+<link>
+	<name>wrist3</name>
+	<deviceName>virtualLinkProvider3</deviceName>
+	<type>virtual</type>
+	<index>25</index>
+	<scale>1.0</scale>
+	<upperLimit>360.0</upperLimit>
+	<lowerLimit>-360.0</lowerLimit>
+	<upperVelocity>1.0E7</upperVelocity>
+	<lowerVelocity>-1.0E7</lowerVelocity>
+	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>360.0</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-360.0</deviceTheoreticalMin>
+	<isLatch>false</isLatch>
+	<indexLatch>0.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>LewanSoulMotor</type>
+			<id>lx_224</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>LewanSoulHorn</type>
+			<id>round_m3_bolts</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.0</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>0.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
+
+<ZframeToRAS
+>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>19.91</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>0.5000004363321228</rotw>
+	<rotx>-0.49999956366749665</rotx>
+	<roty>-0.4999995636674967</roty>
+	<rotz>-0.5000004363321227</rotz>
+</baseToZframe>
+
+</appendage>
+
+<ZframeToRAS>
+	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</baseToZframe>
+	<mass>0.005</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+<vitamins>
+
+</vitamins>
+
+</mobilebase>
+
+</root>

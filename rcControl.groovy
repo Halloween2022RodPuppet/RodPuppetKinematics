@@ -2,6 +2,8 @@
 import com.neuronrobotics.sdk.addons.gamepad.BowlerJInputDevice
 import com.neuronrobotics.sdk.addons.gamepad.IGameControlEvent
 import com.neuronrobotics.sdk.addons.kinematics.MobileBase
+import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR
+import com.neuronrobotics.sdk.addons.kinematics.parallel.ParallelGroup
 import com.neuronrobotics.sdk.common.DeviceManager
 import com.neuronrobotics.bowlerstudio.assets.ConfigurationDatabase
 import com.neuronrobotics.bowlerstudio.creature.MobileBaseLoader
@@ -16,7 +18,33 @@ MobileBase base=DeviceManager.getSpecificDevice( "JackSkellington",{
 	return m
 })
 
-println base.getScriptingName()
+MobileBase left=DeviceManager.getSpecificDevice( "JackSkellingtonLeftHand",{
+	//If the device does not exist, prompt for the connection
+
+	MobileBase m = MobileBaseLoader.fromGit(
+			"https://github.com/Halloween2022RodPuppet/RodPuppetKinematics.git",
+			"rodpuppet2.xml"
+			)
+	return m
+})
+
+MobileBase right=DeviceManager.getSpecificDevice( "JackSkellingtonRightHand",{
+	//If the device does not exist, prompt for the connection
+
+	MobileBase m = MobileBaseLoader.fromGit(
+			"https://github.com/Halloween2022RodPuppet/RodPuppetKinematics.git",
+			"rodpuppet3.xml"
+			)
+	return m
+})
+
+
+ParallelGroup pg = base.getParallelGroup("delta")
+
+println " base name "+base.getScriptingName()+" paraalell "+pg.getScriptingName()
+
+if (pg==null)
+	throw new NullPointerException("Paralel group is null!")
 
 List<String> gameControllerNames = ConfigurationDatabase.getObject("katapult", "gameControllerNames", [
 	"Dragon",
@@ -96,7 +124,13 @@ try{
 	def lasttrig=0;
 	while(!Thread.interrupted() ){
 		Thread.sleep(30)
-
+		TransformNR changed=new TransformNR()
+		changed.setZ(125+(ljud*-5))
+		//println x+" "+rz
+		changed.setX(rz*20)
+		changed.setY(x*-15)
+		pg.setDesiredTaskSpaceTransform(changed, 0);
+		
 	}
 }catch(java.lang.InterruptedException ex) {
 //exit sig	
